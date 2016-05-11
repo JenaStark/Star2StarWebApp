@@ -32,6 +32,7 @@ p {
 	margin: 0;
 	padding: 0;
 }
+
 p a {
 	color: #252525;
 	text-decoration: underline;
@@ -44,12 +45,12 @@ p a:hover {
 	padding: 44px 0 50px;
 	text-align: center;
 	width: 960px;
+	position: relative;
 }
 #header a.logo {
 	display: block;
 	margin: 0 auto;
 	padding: 0;
-	width: 340px;
 }
 #header a.logo img {
 	border: 0;
@@ -57,7 +58,16 @@ p a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 50;
+	position: relative;
 
+}
+#bar {
+	border-color: #5CACD5;
+	border-style: solid;
+	background-color: #5CACD5;
+	height: 100px;
+	width: 100%;
+	position: absolute;
 }
 #header ul {
 	margin: 0;
@@ -213,7 +223,7 @@ p a:hover {
 	margin: 0 0 13px;
 	padding: 0;
 	position: relative;
-	width: 100%;
+	width: 30%;
 }
 #body #featured img {
 	border: 0;

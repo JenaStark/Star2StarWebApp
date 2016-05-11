@@ -8,9 +8,27 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
 	<script type="text/javascript" src="js/mobile.js"></script>
+
+	<style type="text/css">
+	.mobileShow { display: none;}
+	/* Smartphone Portrait and Landscape */
+	@media only screen
+	and (min-device-width : 320px)
+	and (max-device-width : 480px){ .mobileShow { display: inline;}}
+	</style>
+
+	<style type="text/css">
+	#body { display: inline;}
+	/* Smartphone Portrait and Landscape */
+	@media only screen
+	and (min-device-width : 320px)
+	and (max-device-width : 480px){  .mobileHide { display: none;}}
+	</style>
 </head>
 <body>
 	<div id="header">
+	<div id = "bar">
+		</div>
 		<a href="index.html" class="logo">
 			<img class = "center" src="images/logo.png" alt="Logo" height="230" width="250" align="middle">
 		</a>
@@ -32,7 +50,13 @@
 			</li> stupid comment here
 		</ul> -->
 	</div>
+	<div class="mobileShow">
+
+
+
+	</div>
 	<div id="body">
+
 		<ul>
 			<li>
 				<a href="contact.html">
@@ -53,6 +77,7 @@
 				</a>
 			</li>
 		</ul>
+		</div>
 		<!-- <div id="featured">
 			<img src="images/the-beacon.jpg" alt="">
 			<div>

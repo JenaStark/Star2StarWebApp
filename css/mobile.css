@@ -11,7 +11,7 @@ body {
 	width: 80%;
 }
 #header a.logo img {
-	width: 100%;
+	width: 80%;
 }
 #mobile-navigation {
 	background: url(../images/mobile-menu.png) no-repeat 0 0;
@@ -95,11 +95,11 @@ body {
 }
 #body > div {
 	padding: 0 5%;
-	width: 90%;
+	width: 70%;
 }
 #body > div img {
 	margin: 24px 0 30px;
-	width: 98%
+	width: 33%
 }
 #body > div .article {
 	padding: 0;
@@ -114,16 +114,16 @@ body {
 	margin: 0 0 20px
 }
 #body #featured img {
-	min-width: 960px;
+	min-width: 500px;
 }
 #body #featured div {
 	left: 0;
 	margin: 0;
 	padding: 0 2%;
-	position: absolute;
+	position: relative;
 	top: 0;
 	text-align: left;
-	width: 96%;
+	width: 33%;
 }
 #body #featured div h2 {
 	font-size: 14px;
@@ -163,7 +163,8 @@ body {
 	width: 42%;
 }
 #body > ul li a img {
-	width: 98%;
+	position: relative;
+	width: 80%;
 }
 #body > ul li a span {
 	padding: 15px 0;
