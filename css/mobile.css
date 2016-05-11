@@ -211,6 +211,8 @@ body {
 }
 #footer {
 	padding: 10px 0 25px;
+	position: fixed;
+	bottom: 0;
 }
 #footer div {
 	overflow: visible;

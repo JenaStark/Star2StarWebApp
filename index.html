@@ -8,13 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
 	<script type="text/javascript" src="js/mobile.js"></script>
+	<link rel="stylesheet" href="css/simple-slideshow-styles.css">
+	<script src="js/better-simple-slideshow.min.js"></script>
+
 
 	<style type="text/css">
-	.mobileShow { display: none;}
+	.bss-slides { display: none;}
 	/* Smartphone Portrait and Landscape */
 	@media only screen
 	and (min-device-width : 320px)
-	and (max-device-width : 480px){ .mobileShow { display: inline;}}
+	and (max-device-width : 480px){ .bss-slides{ display: inline;}}
 	</style>
 
 	<style type="text/css">
@@ -22,7 +25,7 @@
 	/* Smartphone Portrait and Landscape */
 	@media only screen
 	and (min-device-width : 320px)
-	and (max-device-width : 480px){  .mobileHide { display: none;}}
+	and (max-device-width : 480px){  #body { display: none;}}
 	</style>
 </head>
 <body>
@@ -50,9 +53,27 @@
 			</li> stupid comment here
 		</ul> -->
 	</div>
-	<div class="mobileShow">
 
 
+
+		<div class="bss-slides">
+			<figure>
+				<img src="images/value.jpg" width="150%" />
+				<figcaption>Add Promotion</figcaption>
+			</figure>
+			<figure>
+				<img src="images/grocer.jpg" width="70%" />
+				<figcaption>Complete Promotion</figcaption>
+			</figure>
+			<figure>
+				<img src="images/charts.jpg" width="145%" />
+				<figcaption>Results</figcaption>
+			</figure>
+			<!-- more figures here as needed -->
+		</div>
+	<script>
+		makeBSS('.bss-slides');
+	</script>
 
 	</div>
 	<div id="body">
