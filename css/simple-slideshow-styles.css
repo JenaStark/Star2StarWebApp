@@ -38,12 +38,13 @@
     position: relative;
     alignment: center;
     width: 95%;
-    height: 80%;
+    min-height: 80%;
+    max-height: 80%;
 }
 
 .bss-slides figcaption{
     position: absolute;
-    alignment-content: center;
+    align-content: center;
     font-family: sans-serif;
     font-size: 2em;
     right: .50em;
