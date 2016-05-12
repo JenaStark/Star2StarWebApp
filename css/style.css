@@ -32,6 +32,7 @@ p {
 	margin: 0;
 	padding: 0;
 }
+
 p a {
 	color: #252525;
 	text-decoration: underline;
@@ -40,16 +41,17 @@ p a:hover {
 	color: #898989;
 }
 #header {
+	top: 0;
 	margin: 0 auto;
-	padding: 44px 0 50px;
+	padding: 0px 0 5px;
 	text-align: center;
 	width: 960px;
+	position: relative;
 }
 #header a.logo {
 	display: block;
 	margin: 0 auto;
 	padding: 0;
-	width: 340px;
 }
 #header a.logo img {
 	border: 0;
@@ -57,7 +59,16 @@ p a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 50;
+	position: relative;
 
+}
+#bar {
+	border-color: #5CACD5;
+	border-style: solid;
+	background-color: #5CACD5;
+	height: 100px;
+	width: 100%;
+	position: absolute;
 }
 #header ul {
 	margin: 0;
@@ -213,7 +224,7 @@ p a:hover {
 	margin: 0 0 13px;
 	padding: 0;
 	position: relative;
-	width: 100%;
+	width: 33%;
 }
 #body #featured img {
 	border: 0;
@@ -274,7 +285,7 @@ p a:hover {
 #body > ul li {
 	display: block;
 	float: left;
-	margin: 0 10px 20px;
+	margin: 0 10px 32px;
 	padding: 0;
 	width: 300px;
 }
@@ -347,18 +358,20 @@ p a:hover {
 	background: #FFCC33;
 	margin: 0;
 	padding: 36px 0 42px;
+	height: 10px;
 }
 #footer div {
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
 	width: 960px;
+
 }
 #footer div p {
 	color: #000;
 	float: left;
 	line-height: 44px;
-	margin: 0 0 0 10px;
+	margin: 0 0 0 20px;
 	padding: 0;
 }
 #footer div ul {
@@ -366,7 +379,6 @@ p a:hover {
 	float: right;
 	margin: 0;
 	overflow: hidden;
-	padding: 0;
 	width: 256px;
 }
 #footer div ul li {
@@ -385,6 +397,7 @@ p a:hover {
 	padding: 0;
 	text-indent: -99999px;
 	width: 44px;
+
 }
 #footer div ul li #twitter {
 	background-position: 0 0;
