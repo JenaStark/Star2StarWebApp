@@ -102,6 +102,13 @@ p a:hover {
 	padding: 0 0 30px;
 	text-align: center;
 }
+
+.modal-container {
+	position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+	position: absolute;
+}
 #body h1 {
 	color: #fff;
 	display: inline;
