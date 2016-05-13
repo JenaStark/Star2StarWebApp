@@ -2,15 +2,34 @@ body {
   padding: 20px
 }
 
-#container {
-  text-align: match-parent;
+table {
+  width:100%;
 }
 
-#table, th, td {
-  border: 2px solid black;
+#productTable, th, td {
+  border: 1.6px solid black;
   border-collapse: collapse;
 }
+
 th, td {
-  padding: 15px;
+  padding: 10px;
+  text-align: left;
+}
+
+table#productTable tr:nth-child(even) {
+  background-color: #eee;
+}
+table#productTable tr:nth-child(odd) {
+  background-color:#fff;
+}
+
+table#productTable th	{
+  background-color: #ffbe2f;
+  color: white;
+}
+
+#productCategoryRow, th {
+  text-align: center;
   width: 100px;
+  row-span: 100;
 }
