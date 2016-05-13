@@ -104,7 +104,7 @@ p a:hover {
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
-	padding: 0 0 3px;
+	padding: 0 0 20px;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -139,7 +139,7 @@ p a:hover {
 	text-transform: uppercase;
 }
 #body h1 span {
-	background: #252525;
+	background: #5CACD5;
 	display: inline-block;
 	padding: 15px 28px 12px;
 }
