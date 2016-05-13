@@ -3,5 +3,14 @@ body {
 }
 
 #container {
-  text-align: left;
+  text-align: match-parent;
+}
+
+#table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  width: 100px;
 }

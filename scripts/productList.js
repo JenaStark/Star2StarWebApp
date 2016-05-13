@@ -25,12 +25,12 @@ var ProductRow = React.createClass({
         <td>{name}</td>
         <td>{this.props.product.postedDate}</td>
         <td>{this.props.product.endDate}</td>
-        <input
-          type="checkbox"
-          checked={stock}
-          ref="inStockOnlyInput"
-          onChange={this.handleChange}
-        />
+          <td><input
+              type="checkbox"
+              checked={stock}
+              ref="inStockOnlyInput"
+              onChange={this.handleChange}
+          /></td>
       </tr>
     );
 
@@ -52,7 +52,7 @@ var ProductTable = React.createClass({
       lastCategory = product.category;
     }.bind(this));
     return (
-      <table>
+      <table id="table">
 
         <thead>
         <tr>
@@ -80,6 +80,8 @@ var SearchBar = React.createClass({
   render: function() {
     return (
       <div>
+
+          <form>
         <input
           type="text"
           placeholder="Search..."
@@ -87,7 +89,9 @@ var SearchBar = React.createClass({
           ref="filterTextInput"
           onChange={this.handleChange}
         />
-        <p>
+          </form>
+
+
           <input
             type="checkbox"
             checked={this.props.inStockOnly}
@@ -97,7 +101,7 @@ var SearchBar = React.createClass({
           {' '}
           Only show finished promotions
 
-        </p>
+
       </div>
     );
   }
