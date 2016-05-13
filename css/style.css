@@ -62,8 +62,22 @@ p a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 50;
+}
 
+.form-group {
+	padding-top: 30px;
+}
 
+#exampleInputFile {
+	padding-top: 10px;
+	align-self: center;
+	margin:auto;
+	padding-left: 8%;
+}
+
+#exampleInputFile input {
+	margin:auto;
+	align-self: center;
 }
 #bar {
 	border-color: #5CACD5;
@@ -112,6 +126,7 @@ p a:hover {
 .dateinput {
 	padding-right: 3%;
 	padding-left: 3%;
+
 }
 #body h1 {
 	color: #fff;
