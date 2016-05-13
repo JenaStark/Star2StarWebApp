@@ -6,7 +6,7 @@ var ProductCategoryRow = React.createClass({
   render: function() {
     return (
       <tr id="productCategoryRow">
-        <th colSpan="5">{this.props.category}</th>
+        <th colSpan="6">{this.props.category}</th>
       </tr>
     );
   }
@@ -23,7 +23,8 @@ var ProductRow = React.createClass({
       <tr>
         <td>{this.props.product.postedDate}</td>
         <td>{name}</td>
-        <td>{this.props.product.postedDate}</td>
+          <td>{this.props.product.category}</td>
+          <td>{this.props.product.postedDate}</td>
         <td>{this.props.product.endDate}</td>
           <td><input
               type="checkbox"
@@ -54,12 +55,14 @@ var ProductTable = React.createClass({
     return (
         <div>
       <table id="productTable">
+          <caption>Promotional List</caption>
 
         <thead>
         <tr>
           <th>Posted Date</th>
-          <th>Promotion</th>
-          <th>StartDate</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>StartDate</th>
           <th>EndDate</th>
           <th>Done</th>
         </tr>
@@ -132,11 +135,13 @@ var FilterableProductTable = React.createClass({
           inStockOnly={this.state.inStockOnly}
           onUserInput={this.handleUserInput}
         />
+          <p>
         <ProductTable
           products={this.props.products}
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
         />
+              </p>
       </div>
     );
   }
