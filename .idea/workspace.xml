@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e9ba81a-c19f-4a1e-b07d-51d148490d7b" name="Default" comment="">
+    <list default="true" id="8e9ba81a-c19f-4a1e-b07d-51d148490d7b" name="Default" comment="contact page">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mustache9.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact.html" afterPath="$PROJECT_DIR$/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="star2starwebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -346,7 +352,7 @@
       <workItem from="1462971124880" duration="37917000" />
       <workItem from="1463085883929" duration="10725000" />
       <workItem from="1463164540590" duration="4762000" />
-      <workItem from="1463173045023" duration="381000" />
+      <workItem from="1463173045023" duration="488000" />
     </task>
     <task id="LOCAL-00001" summary="Testing Second commit">
       <created>1462917095130</created>
@@ -411,11 +417,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463169386019</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="contact page">
+      <created>1463173489035</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1463173489035</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64007000" />
+    <option name="totallyTimeSpent" value="64114000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,14 +445,14 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19475655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2890411" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18208517" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18262151" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -490,7 +503,8 @@
     <MESSAGE value="Added Promotion List html file &#10;Added some js code and Functionalities" />
     <MESSAGE value="Fixed the contact page CSS and cleaned up html" />
     <MESSAGE value="Fixed the show all promotions page to remove extra content. Remove pinterest icon from footer. Fixed about page picture and fixed title colors to blue from black." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the show all promotions page to remove extra content. Remove pinterest icon from footer. Fixed about page picture and fixed title colors to blue from black." />
+    <MESSAGE value="contact page" />
+    <option name="LAST_COMMIT_MESSAGE" value="contact page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
