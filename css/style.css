@@ -109,6 +109,10 @@ p a:hover {
 .modal-container .modal, .modal-container .modal-backdrop {
 	position: absolute;
 }
+.dateinput {
+	padding-right: 3%;
+	padding-left: 3%;
+}
 #body h1 {
 	color: #fff;
 	display: inline;
