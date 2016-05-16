@@ -103,6 +103,7 @@
         var start = $(this).datepicker('getDate');
     }
     });
+
     $("#end").datepicker(
     {
         onSelect: function()
