@@ -2,6 +2,8 @@
  * Created by Michael on 5/13/16.
  */
 
+
+
     var Comment = React.createClass({
     rawMarkup: function() {
     var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
@@ -21,6 +23,7 @@
 });
 
     var CommentBox = React.createClass({
+    /* Do not need to load data on this page
     loadCommentsFromServer: function() {
     $.ajax({
     url: this.props.url,
@@ -33,7 +36,7 @@
     console.error(this.props.url, status, err.toString());
 }.bind(this)
 });
-},
+},*/
     handleCommentSubmit: function(comment) {
     var comments = this.state.data;
     // Optimistically set an id on the new comment. It will be replaced by an
@@ -59,15 +62,16 @@
     getInitialState: function() {
     return {data: []};
 },
-    componentDidMount: function() {
+   /* Got rid of displaying old data when mounting
+   componentDidMount: function() {
     this.loadCommentsFromServer();
     setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-},
+},*/
+        /* Include  <CommentList data={this.state.data} /> to display data*/
     render: function() {
     return (
     <div className="commentBox">
     <h1>Current Promotions</h1>
-    <CommentList data={this.state.data} />
     <CommentForm onCommentSubmit={this.handleCommentSubmit} />
     </div>
     );
@@ -151,6 +155,6 @@
 });
 
     ReactDOM.render(
-    <CommentBox url="/api/comments" pollInterval={2000} />,
+    <CommentBox url="/api/comments" />,
     document.getElementById('content')
     );
