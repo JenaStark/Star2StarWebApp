@@ -141,7 +141,7 @@
     onChange={this.handleAuthorChange}
     />
     <p></p>
-    <input
+    <input id = "description"
     type="text"
     placeholder="Promotion Description"
     value={this.state.text}
