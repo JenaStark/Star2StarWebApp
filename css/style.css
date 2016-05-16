@@ -65,11 +65,10 @@ p a:hover {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 50px;
 }
 
 .form-group {
-	padding-top: 30px;
+	padding-top: 10px;
 
 }
 
@@ -162,6 +161,11 @@ p a:hover {
 	margin: 0 auto;
 	padding: 30px 30px 0;
 	width: 560px;
+}
+#file {
+	align-self: center;
+	margin: 0 auto;
+
 }
 #body > div .article h2 {
 	font-family: "Arial Black", Gadget, sans-serif;
@@ -353,7 +357,7 @@ p a:hover {
 }
 #body form {
 	margin: 0 auto;
-	padding: 24px 0 0;
+	padding: 0px 0 0;
 	width: 620px;
 }
 #body form input, #body form textarea {
@@ -362,10 +366,10 @@ p a:hover {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	font-weight: normal;
-	margin: 0 0 37px;
 	padding: 20px 10px;
 	text-align: center;
 	width: 596px;
+	margin: 12px auto;
 }
 #description {
 	height: 175px;
@@ -387,6 +391,7 @@ p a:hover {
 	padding: 20px 28px;
 	width: auto;
 }
+
 #body form #send:hover {
 	background: #fff;
 	color: #252525;

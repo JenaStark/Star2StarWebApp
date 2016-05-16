@@ -113,7 +113,7 @@
 
     var CommentForm = React.createClass({
     getInitialState: function() {
-    return {author: '', text: ''. start};
+    return {author: '', text: '', file: null};
 },
     handleAuthorChange: function(e) {
     this.setState({author: e.target.value});
@@ -134,20 +134,37 @@
     render: function() {
     return (
     <form className="commentForm" onSubmit={this.handleSubmit}>
-    <input
+    <input class = "form"
     type="text"
     placeholder="PROMOTION NAME"
     value={this.state.author}
     onChange={this.handleAuthorChange}
     />
     <p></p>
-    <input id = "description"
+    <input class = "form" id = "description"
     type="text"
     placeholder="DESCRIPTION"
     value={this.state.text}
     onChange={this.handleTextChange}
     />
     <p></p>
+        <input id = "end"
+               type="date"
+               value = {this.state.end}
+        />
+        <p></p>
+        <input id = "start"
+            type = "date"
+            value = {this.state.start}
+
+            />
+        <p></p>
+
+        <input id = "file"
+               type = "file"
+               value = {this.state.file}
+
+        />
     <input type="submit" value="POST PROMOTION" />
     </form>
     );
