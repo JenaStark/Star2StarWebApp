@@ -2,6 +2,8 @@
  * Created by Michael on 5/13/16.
  */
 
+
+
     var Comment = React.createClass({
     rawMarkup: function() {
     var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
@@ -21,6 +23,7 @@
 });
 
     var CommentBox = React.createClass({
+    /* Do not need to load data on this page
     loadCommentsFromServer: function() {
     $.ajax({
     url: this.props.url,
@@ -33,7 +36,7 @@
     console.error(this.props.url, status, err.toString());
 }.bind(this)
 });
-},
+},*/
     handleCommentSubmit: function(comment) {
     var comments = this.state.data;
     // Optimistically set an id on the new comment. It will be replaced by an
@@ -59,15 +62,16 @@
     getInitialState: function() {
     return {data: []};
 },
-    componentDidMount: function() {
+   /* Got rid of displaying old data when mounting
+   componentDidMount: function() {
     this.loadCommentsFromServer();
     setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-},
+},*/
+        /* Include  <CommentList data={this.state.data} /> to display data*/
     render: function() {
     return (
     <div className="commentBox">
     <h1>Current Promotions</h1>
-    <CommentList data={this.state.data} />
     <CommentForm onCommentSubmit={this.handleCommentSubmit} />
     </div>
     );
@@ -109,7 +113,7 @@
 
     var CommentForm = React.createClass({
     getInitialState: function() {
-    return {author: '', text: ''. start};
+    return {author: '', text: '', file: null};
 },
     handleAuthorChange: function(e) {
     this.setState({author: e.target.value});
@@ -130,27 +134,44 @@
     render: function() {
     return (
     <form className="commentForm" onSubmit={this.handleSubmit}>
-    <input
+    <input class = "form"
     type="text"
-    placeholder="Promotion Name"
+    placeholder="PROMOTION NAME"
     value={this.state.author}
     onChange={this.handleAuthorChange}
     />
     <p></p>
-    <input
+    <input class = "form" id = "description"
     type="text"
-    placeholder="Promotion Description"
+    placeholder="DESCRIPTION"
     value={this.state.text}
     onChange={this.handleTextChange}
     />
     <p></p>
-    <input type="submit" value="Post Promotion" />
+        <input id = "end"
+               type="date"
+               value = {this.state.end}
+        />
+        <p></p>
+        <input id = "start"
+            type = "date"
+            value = {this.state.start}
+
+            />
+        <p></p>
+
+        <input id = "file"
+               type = "file"
+               value = {this.state.file}
+
+        />
+    <input type="submit" value="POST PROMOTION" />
     </form>
     );
 }
 });
 
     ReactDOM.render(
-    <CommentBox url="/api/comments" pollInterval={2000} />,
+    <CommentBox url="/api/comments" />,
     document.getElementById('content')
     );
