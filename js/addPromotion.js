@@ -136,19 +136,19 @@
     <form className="commentForm" onSubmit={this.handleSubmit}>
     <input
     type="text"
-    placeholder="Promotion Name"
+    placeholder="PROMOTION NAME"
     value={this.state.author}
     onChange={this.handleAuthorChange}
     />
     <p></p>
     <input id = "description"
     type="text"
-    placeholder="Promotion Description"
+    placeholder="DESCRIPTION"
     value={this.state.text}
     onChange={this.handleTextChange}
     />
     <p></p>
-    <input type="submit" value="Post Promotion" />
+    <input type="submit" value="POST PROMOTION" />
     </form>
     );
 }
