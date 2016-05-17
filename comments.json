@@ -1,23 +1,13 @@
 [
+
     {
-        "id": 1463491609393,
-        "author": "testing 3",
-        "text": "4",
-        "start": "2016-05-21",
-        "end": "2016-05-20"
-    },
-    {
-        "id": 1463491758915,
-        "author": "hey look its a date",
-        "text": "hola",
-        "start": "2016-05-29",
-        "end": "2016-05-28"
-    },
-    {
-        "id": 1463491865906,
-        "author": "hey",
-        "text": "dates were s",
-        "start": "2016-05-21",
-        "end": "2016-05-22"
+        "id": 1463498657262,
+        "author": "test",
+        "text": "t",
+        "start": "2016-05-28",
+        "end": "2016-05-30",
+        "posted": "Tue May 17 2016 11:24:17 GMT-0400 (EDT)",
+        "status": "false"
     }
+
 ]

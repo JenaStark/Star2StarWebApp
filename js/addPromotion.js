@@ -81,8 +81,13 @@
     var CommentList = React.createClass({
     render: function() {
     var commentNodes = this.props.data.map(function(comment) {
-    return (
-    <Comment author={comment.author} key={comment.id} start={comment.start} end={comment.end}>
+        var date = new Date();
+
+        var status = comment.end < date;
+
+        return (
+    <Comment author={comment.author} key={comment.id} start={comment.start} end={comment.end}
+             posted = {comment.posted} status = {comment.status}>
     {comment.text}
     </Comment>
     );
@@ -99,7 +104,7 @@
 
     var CommentForm = React.createClass({
     getInitialState: function() {
-    return {author: '', text: '', end: '', start: '', file: null};
+    return {author: '', text: '', end: '', start: '', file: null, status: false};
 },
     handleAuthorChange: function(e) {
     this.setState({author: e.target.value});
@@ -124,8 +129,8 @@
     if (!text || !author || !start || !end) {
     return;
 }
-    this.props.onCommentSubmit({author: author, text: text, start: start, end: end});
-    this.setState({author: '', text: '', start: '', end: ''});
+    this.props.onCommentSubmit({author: author, text: text, start: start, end: end, posted: new Date(), status: false });
+    this.setState({author: '', text: '', start: '', end: '', posted: '', status: false});
 },
     render: function() {
     return (
