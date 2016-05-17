@@ -20,20 +20,20 @@ var Comment = React.createClass({
         }
 
         return (
-                <tr>
-                    <td>{this.props.posted}</td>
-                    <td>{this.props.author}</td>
-                    <td dangerouslySetInnerHTML={this.rawMarkup()}>{this.props.text}</td>
-                    <td>{this.props.start}</td>
-                    <td>{this.props.end}</td>
-                    <td>{status}</td>
+            <tr>
+                <td>{this.props.posted}</td>
+                <td>{this.props.author}</td>
+                <td dangerouslySetInnerHTML={this.rawMarkup()}>{this.props.text}</td>
+                <td>{this.props.start}</td>
+                <td>{this.props.end}</td>
+                <td>{status}</td>
 
-                    <td><input
-                        type="checkbox"
-                        ref="inStockOnlyInput"
-                        onChange={this.handleChange}
-                    /></td>
-                </tr>
+                <td><input
+                    type="checkbox"
+                    ref="inStockOnlyInput"
+                    onChange={this.handleChange}
+                /></td>
+            </tr>
         );
     }
 });
@@ -67,7 +67,7 @@ var SearchBar = React.createClass({
                     onChange={this.handleChange}
                 />
                 {' '}
-                Only Show Overdue Promotions
+                Only show Overdue Promotions
 
 
             </div>
@@ -185,4 +185,3 @@ ReactDOM.render(
     <CommentBox url="/api/comments" pollInterval={2000} />,
     document.getElementById('container')
 );
-
