@@ -87,11 +87,14 @@ var CommentBox = React.createClass({
 var CommentList = React.createClass({
     render: function() {
         var commentNodes = this.props.data.map(function(comment) {
+            var status = 'false';
             var date = new Date();
-            var status = comment.end < date;
+            if (Date.parse(comment.end)< date) {
+                status = 'true';
+            }
             return (
                 <Comment author={comment.author} key={comment.id} start={comment.start} end={comment.end} posted={comment.posted}
-                staus={comment.status}>
+                status = {status}>
                     
                     {comment.text}
                 </Comment>
@@ -112,7 +115,7 @@ var CommentList = React.createClass({
                         <th>Description</th>
                         <th>StartDate</th>
                         <th>EndDate</th>
-                        <th>Status</th>
+                        <th>Overdue?</th>
                         <th>Done</th>
                     </tr>
                     </thead>
