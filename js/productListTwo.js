@@ -67,7 +67,7 @@ var SearchBar = React.createClass({
                     onChange={this.handleChange}
                 />
                 {' '}
-                Only show Overdue Promotions
+                Only Show Overdue Promotions
 
 
             </div>
