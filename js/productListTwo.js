@@ -15,13 +15,13 @@ var Comment = React.createClass({
         return (
                 <tr>
                     <td>{this.props.id}</td>
-                    <td>{this.props.id}</td>
-                    <td>{this.props.id}</td>
                     <td>{name}</td>
                     <td dangerouslySetInnerHTML={this.rawMarkup()}>{this.props.text}</td>
+                    <td>{this.props.start}</td>
+                    <td>{this.props.end}</td>
+
                     <td><input
                         type="checkbox"
-                        checked={name}
                         ref="inStockOnlyInput"
                         onChange={this.handleChange}
                     /></td>
@@ -87,8 +87,8 @@ var CommentList = React.createClass({
     render: function() {
         var commentNodes = this.props.data.map(function(comment) {
             return (
-                <Comment author={comment.author} key={comment.id} id={comment.id}
-                >
+                <Comment author={comment.author} key={comment.id} start={comment.start} end={comment.end}>
+                    
                     {comment.text}
                 </Comment>
             );
