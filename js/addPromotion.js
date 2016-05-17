@@ -81,8 +81,13 @@
     var CommentList = React.createClass({
     render: function() {
     var commentNodes = this.props.data.map(function(comment) {
-    return (
-    <Comment author={comment.author} key={comment.id}>
+        var date = new Date();
+
+        var status = comment.end < date;
+
+        return (
+    <Comment author={comment.author} key={comment.id} start={comment.start} end={comment.end}
+             posted = {comment.posted} status = {comment.status}>
     {comment.text}
     </Comment>
     );
@@ -96,25 +101,10 @@
 });
 
 
-    $("#start").datepicker(
-    {
-        onSelect: function()
-    {
-        var start = $(this).datepicker('getDate');
-    }
-    });
-
-    $("#end").datepicker(
-    {
-        onSelect: function()
-    {
-        var end = $(this).datepicker('getDate');
-    }
-    });
 
     var CommentForm = React.createClass({
     getInitialState: function() {
-    return {author: '', text: '', file: null};
+    return {author: '', text: '', end: '', start: '', file: null, status: false};
 },
     handleAuthorChange: function(e) {
     this.setState({author: e.target.value});
@@ -122,15 +112,25 @@
     handleTextChange: function(e) {
     this.setState({text: e.target.value});
 },
+        handleEndChange: function(e) {
+            this.setState({end: e.target.value});
+        },
+
+        handleStartChange: function(e) {
+            this.setState({start: e.target.value});
+        },
+
     handleSubmit: function(e) {
     e.preventDefault();
     var author = this.state.author.trim();
     var text = this.state.text.trim();
-    if (!text || !author) {
+        var start = this.state.start.trim();
+        var end = this.state.end.trim();
+    if (!text || !author || !start || !end) {
     return;
 }
-    this.props.onCommentSubmit({author: author, text: text});
-    this.setState({author: '', text: ''});
+    this.props.onCommentSubmit({author: author, text: text, start: start, end: end, posted: new Date(), status: false });
+    this.setState({author: '', text: '', start: '', end: '', posted: '', status: false});
 },
     render: function() {
     return (
@@ -149,14 +149,16 @@
     onChange={this.handleTextChange}
     />
     <p></p>
-        <input id = "end"
+        <input id = "start"
                type="date"
-               value = {this.state.end}
+               value = {this.state.start}
+               onChange={this.handleStartChange}
         />
         <p></p>
-        <input id = "start"
+        <input id = "end"
             type = "date"
-            value = {this.state.start}
+            value = {this.state.end}
+               onChange={this.handleEndChange}
 
             />
         <p></p>
