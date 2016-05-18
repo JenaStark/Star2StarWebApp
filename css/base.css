@@ -13,7 +13,7 @@ table {
 
 th, td {
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 table#productTable tr:nth-child(even) {
@@ -25,6 +25,7 @@ table#productTable tr:nth-child(odd) {
 
 table#productTable th	{
   background-color: #ffbe2f;
+  text-align: center;
   color: white;
 }
 

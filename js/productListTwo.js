@@ -42,7 +42,8 @@ var SearchBar = React.createClass({
     handleChange: function() {
         this.props.onUserInput(
             this.refs.filterTextInput.value,
-            this.refs.inStockOnlyInput.checked
+            this.refs.inStockOnlyInput.checked,
+            this.refs.inPendingPromotion.checked
         );
     },
     render: function() {
@@ -67,9 +68,16 @@ var SearchBar = React.createClass({
                     onChange={this.handleChange}
                 />
                 {' '}
-                Only Show Overdue Promotions
-
-
+                Show Overdue Promotions
+                {'  '}
+                <input
+                    type="checkbox"
+                    checked={this.props.inPendingPromotion}
+                    ref="inPendingPromotion"
+                    onChange={this.handleChange}
+                />
+                {' '}
+                Show Pending Promotions
             </div>
         );
     }
@@ -98,10 +106,11 @@ var CommentBox = React.createClass({
         };
     },
 
-    handleUserInput: function(filterText, inStockOnly) {
+    handleUserInput: function(filterText, inStockOnly, inPendingPromotion) {
         this.setState({
             filterText: filterText,
-            inStockOnly: inStockOnly
+            inStockOnly: inStockOnly,
+            inPendingPromotion: inPendingPromotion
         });
     },
 
@@ -115,6 +124,7 @@ var CommentBox = React.createClass({
                 <SearchBar
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
+                    inPendingPromotion = {this.state.inPendingPromotion}
                     onUserInput={this.handleUserInput}
                 />
                 <p>
@@ -122,6 +132,7 @@ var CommentBox = React.createClass({
                         data={this.state.data}
                         filterText={this.state.filterText}
                         inStockOnly={this.state.inStockOnly}
+                        inPendingPromotion = {this.state.inPendingPromotion}
                     />
                 </p>
             </div>
@@ -132,16 +143,16 @@ var CommentBox = React.createClass({
 var CommentList = React.createClass({
     render: function() {
         var commentNodes = [];
-        var status = 'false';
-        var date = new Date();
 
         this.props.data.map(function(comment) {
+            var status = 'false';
+            var date = new Date();
 
             if (Date.parse(comment.end)< date) {
                 status = 'true';
             }
 
-            if (comment.author.indexOf(this.props.filterText) === -1 || (status === 'false' && this.props.inStockOnly)) {
+            if (comment.author.indexOf(this.props.filterText) === -1 || (status === 'false' && this.props.inStockOnly) || (status === 'true' && this.props.inPendingPromotion)) {
                 return;
             }
 
