@@ -8,16 +8,27 @@ var Comment = React.createClass({
         return { __html: rawMarkup };
     },
 
+    handleChange: function() {
+        this.props.setState({completed: 'true'});
+    },
+
     render: function() {
         //TODO - Temporary Fix - Should find a way to update JSON
         // File change "status='Value'" data on server
-        let status = '';
+        // Save/Change Done checkbox
+        var status = '';
 
-        if (this.props.status == 'false'){
-            status =  <span style={{color: 'blue'}}>{this.props.status}</span>
+        if (this.props.status == 'no'){
+            status =  <span style={{color: 'green'}}>{this.props.status}</span>
         } else {
             status =  <span style={{color: 'red'}}>{this.props.status}</span>
         }
+
+        var checked = false;
+        if (this.props.completed == 'true') {
+            checked = true;
+        }
+
 
         return (
                 <tr>
@@ -31,6 +42,7 @@ var Comment = React.createClass({
                     <td><input
                         type="checkbox"
                         ref="inStockOnlyInput"
+                        checked = {checked}
                         onChange={this.handleChange}
                     /></td>
                 </tr>
@@ -79,6 +91,7 @@ var SearchBar = React.createClass({
                 />
                 {' '}
                 Show Pending Promotions
+                <p></p>
             </div>
         );
     }
@@ -118,6 +131,7 @@ var CommentBox = React.createClass({
     componentDidMount: function() {
         this.loadCommentsFromServer();
         setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+
     },
     render: function() {
         return (
@@ -146,20 +160,21 @@ var CommentList = React.createClass({
         var commentNodes = [];
 
         this.props.data.map(function(comment) {
-            var status = 'false';
+            var status = 'no';
             var date = new Date();
 
             if (Date.parse(comment.end)< date) {
-                status = 'true';
+                status = 'yes';
             }
 
-            if (comment.author.indexOf(this.props.filterText) === -1 || (status === 'false' && this.props.inStockOnly) || (status === 'true' && this.props.inPendingPromotion)) {
+
+            if (comment.author.indexOf(this.props.filterText) === -1 || (status === 'no' && this.props.inStockOnly) || (status === 'yes' && this.props.inPendingPromotion)) {
                 return;
             }
 
             commentNodes.push(
                 <Comment author={comment.author} key={comment.id} start={comment.start} end={comment.end} posted={comment.posted}
-                         status = {status}>
+                         status = {status} completed = {comment.completed}>
                     {comment.text}
                 </Comment>
             );

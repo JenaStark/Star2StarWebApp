@@ -85,7 +85,7 @@ var CommentList = React.createClass({
 
             return (
                 <Comment author={comment.author} key={comment.id} start={comment.start} end={comment.end}
-                         posted = {comment.posted} status = {comment.status}>
+                         posted = {comment.posted} status = {comment.status} completed = {comment.completed}>
                     {comment.text}
                 </Comment>
             );
@@ -135,7 +135,7 @@ var CommentForm = React.createClass({
             }
 
 
-        this.props.onCommentSubmit({author: author, text: text, start: start, end: end, posted: new Date(), status: status});
+        this.props.onCommentSubmit({author: author, text: text, start: start, end: end, posted: new Date(), status: status, completed: 'false'});
         this.setState({author: '', text: '', start: '', end: '', status: ''});
     },
     render: function() {

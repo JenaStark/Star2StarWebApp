@@ -63,6 +63,7 @@ app.post('/api/comments', function(req, res) {
       end: req.body.end,
       posted: req.body.posted,
       status: req.body.status,
+      completed: req.body.completed,
     };
     comments.push(newComment);
     fs.writeFile(COMMENTS_FILE, JSON.stringify(comments, null, 4), function(err) {
