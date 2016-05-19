@@ -70,6 +70,7 @@ var SearchBar = React.createClass({
                 {' '}
                 Show Overdue Promotions
                 {'  '}
+                <p></p>
                 <input
                     type="checkbox"
                     checked={this.props.inPendingPromotion}
@@ -169,16 +170,15 @@ var CommentList = React.createClass({
             <div className="commentList">
 
                 <table id="productTable">
-                    <caption>Promotional List</caption>
 
                     <thead>
                     <tr>
                         <th>Posted Date</th>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>StartDate</th>
-                        <th>EndDate</th>
-                        <th>Overdue?</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Expired</th>
                         <th>Done</th>
                     </tr>
                     </thead>
