@@ -140,7 +140,7 @@ var CommentForm = React.createClass({
     },
     render: function() {
         return (
-            <form className="commentForm" onSubmit={this.handleSubmit}>
+            <form class="commentForm" onSubmit={this.handleSubmit}>
                 <input class = "form"
                        type="text"
                        placeholder="PROMOTION NAME"
@@ -155,25 +155,26 @@ var CommentForm = React.createClass({
                        onChange={this.handleTextChange}
                 />
                 <p></p>
+                <span id ="dates">
+                    <span id="startdatetext"> START: </span>
                 <input id = "start"
                        type="date"
                        value = {this.state.start}
                        onChange={this.handleStartChange}
                 />
-                <p></p>
+                <span id = "enddatetext"> END: </span>
                 <input id = "end"
                        type = "date"
                        value = {this.state.end}
                        onChange={this.handleEndChange}
 
-                />
+                /> </span>
                 <p></p>
-
-                <input id = "file"
+                <span id = "filespan">
+                <input id="file"
                        type = "file"
                        value = {this.state.file}
-
-                />
+                /> </span>
                 <input type="submit" value="POST PROMOTION" id ="submit"/>
             </form>
         );
